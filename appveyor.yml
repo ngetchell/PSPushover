@@ -12,7 +12,11 @@ build: false
 
 test_script:
 # Test with native PS version
+<<<<<<< HEAD
   - ps: . .\Tests\PSPushover.Tests.ps1
+=======
+  - ps: . .\Tests\PSGitLab.Tests.ps1
+>>>>>>> 6a568da2f122fcfafe9b450125f7cddaf03033b1
 
 branches:
   only:
