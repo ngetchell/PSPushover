@@ -1,4 +1,4 @@
-﻿$ConfigPath = "$env:appdata\PSGitLab\PSPushoverConfiguration.xml"
+﻿$ConfigPath = "$env:appdata\PSPushover\PSPushoverConfiguration.xml"
 
 Function Save-PushoverAPIInformation {
 [cmdletbinding()]

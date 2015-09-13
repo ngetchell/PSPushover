@@ -1,2 +1,4 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/pjvxerp8fodakbo7/branch/master?svg=true)](https://ci.appveyor.com/project/ngetchell/pspushover/branch/master)
+
 # PSPushover
-A powershell module for working with the Pushover API from the command line. 
+A PowerShell module for working with the Pushover API from the command line.
