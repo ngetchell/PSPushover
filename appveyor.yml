@@ -12,10 +12,9 @@ build: false
 
 test_script:
 # Test with native PS version
-  - ps: . .\Tests\PSGitLab.Tests.ps1
+  - ps: . .\Tests\PSPushover.Tests.ps1
 
 branches:
   only:
   - master
   - appveyor
- 
