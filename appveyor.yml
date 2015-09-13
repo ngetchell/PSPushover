@@ -1,0 +1,24 @@
+
+# See http://www.appveyor.com/docs/appveyor-yml for many more options
+# Fron https://github.com/RamblingCookieMonster/PSStackExchange/blob/master/appveyor.yml
+
+# Allow WMF5 (i.e. PowerShellGallery functionality)
+os: Unstable
+
+install:
+  - cinst pester -y
+
+build: false
+
+test_script:
+# Test with native PS version
+<<<<<<< HEAD
+  - ps: . .\Tests\PSPushover.Tests.ps1
+=======
+  - ps: . .\Tests\PSGitLab.Tests.ps1
+>>>>>>> 6a568da2f122fcfafe9b450125f7cddaf03033b1
+
+branches:
+  only:
+  - master
+  - appveyor
