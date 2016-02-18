@@ -12,7 +12,7 @@ build: false
 
 test_script:
 # Test with native PS version
-  - ps: Invoke-Pester
+  - ps: Invoke-Pester -EnableExit
 
 branches:
   only:
