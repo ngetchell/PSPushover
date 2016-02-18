@@ -14,4 +14,6 @@ Foreach($import in @($Public + $Private)) {
 
 Export-ModuleMember -Function $Public.Basename
 
-$ConfigPath = "$env:appdata\PSGitLab\PSPushoverConfiguration.xml"
+# Internal 
+$ConfigPath = "$env:appdata\PSPushover\PSPushoverConfiguration.xml"
+$APIURI = 'https://api.pushover.net/1'
