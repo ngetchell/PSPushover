@@ -8,7 +8,7 @@ InModuleScope $ModuleName {
 
         Context 'Mocking Functions' { 
             It 'Mocking Invoke-RestMethod' { 
-                #Mock Import-PushoverConfig {}
+                Mock Import-PushoverConfig {}
                 Mock Invoke-RestMethod {}
 
                 $Results = Get-PushoverUserDevice 
