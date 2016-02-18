@@ -12,9 +12,10 @@ build: false
 
 test_script:
 # Test with native PS version
-  - ps: . .\Tests\PSPushover.Tests.ps1
+  - ps: Invoke-Pester -EnableExit
 
 branches:
   only:
   - master
   - appveyor
+  - dev
