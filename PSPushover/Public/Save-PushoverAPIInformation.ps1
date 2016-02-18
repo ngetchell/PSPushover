@@ -1,6 +1,15 @@
 ﻿$ConfigPath = "$env:appdata\PSPushover\PSPushoverConfiguration.xml"
 
 Function Save-PushoverAPIInformation {
+<#
+.SYNOPSIS
+Used to save a configuration file used for PushOver alerts.
+.DESCRIPTION
+Used to save a configuration file used for PushOver alerts. It stores the file in the AppData folder
+in XML format. 
+.EXAMPLE
+Save-PushoverAPIInformation -UserKey 'lksjdflhiqhrbrjqbjbrla' -AppToken 'jhsgkbsgkjbbbqbqisksn'
+#>
 [cmdletbinding()]
 param(
     
