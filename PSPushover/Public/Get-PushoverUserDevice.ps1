@@ -9,12 +9,17 @@
    Nexus7
    Blackfyre
 #>
-    
-    $Config = Import-PushoverConfig
+    [cmdletbinding()]
+    param(
+        [string]$token = "$(Import-PushoverConfig | Select-Object -ExpandProperty AppToken)",
+
+        [string]$user = "$(Import-PushoverConfig | Select-Object -ExpandProperty UserKey)"
+    )    
+
 
     $Parameters = @{
-        token=$Config.AppToken;
-        user=$Config.UserKey;
+        token=$token;
+        user=$user;
     }
     
     $Results = $Parameters | Invoke-RestMethod -Uri "$APIURI/users/validate.json" -Method Post
