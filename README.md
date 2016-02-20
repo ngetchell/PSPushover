@@ -2,3 +2,6 @@
 
 # PSPushover
 A PowerShell module for working with the Pushover API from the command line.
+
+### Installation
+![Install](Media/install.gif)
