@@ -26,9 +26,7 @@ Send-PushoverMessage -Title "Error Alert" -Message "Error occured today."
 
 ## Installing
 
-``` powershell
-Find-Module PSPushover -Repository PSGallery | Install-Module
-```
+![Install](Media/install.gif)
 
 ## Contributing
 
