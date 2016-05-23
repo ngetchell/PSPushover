@@ -75,6 +75,15 @@
             ]
         },
         {
+            "taskName": "Lint",
+            "suppressTaskName": true,
+            "showOutput": "always",
+            "args": [
+                "Write-Host 'Linting with PSScriptAnalyser...'; Invoke-ScriptAnalyzer -Path ${workspaceRoot}; ",
+                "Invoke-Command { Write-Host 'Finished Linting'} "
+            ]  
+        },          
+        {
             "taskName": "Test",
             "suppressTaskName": true,
             "isTestCommand": true,
