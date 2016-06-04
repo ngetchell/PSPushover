@@ -34,7 +34,9 @@ param(
     <#[DateTime]$timestamp,#>
 
     [ValidateSet('-2','-1','0','1')] 
-    [int]$priority = 0
+    [int]$priority = 0,
+    
+    [switch]$PassThru = $false
 
 )
 DynamicParam {
@@ -75,7 +77,17 @@ DynamicParam {
         $Result = $params | Invoke-RestMethod -Uri "$APIURI/messages.json" -Method Post
         $Result | Add-Member -MemberType NoteProperty -Name datetime -Value (Get-Date)
         $Result | Add-Member -MemberType NoteProperty -Name title -Value $params.Title
-        #$Result.pstypenames.insert(0,'PSPushover.Response')
+        if ($Result.Status -ne 1) {
+            $Result | Add-Member -MemberType NoteProperty -Name success -value $false
+        } elseif ( $Result.Status -eq 1) {
+            $Result | Add-Member -MemberType NoteProperty -Name success -value $true
+        }
+        $Result.pstypenames.insert(0,'PSPushover.Response')
+        
+        if ($PassThru.IsPresent) {
+            Write-Output $Result
+        }
+        
         #$Global:PreviousPushMessages += $Results
     }
 }
