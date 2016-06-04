@@ -9,6 +9,9 @@ Get-Command -Module $ModuleName | ForEach-Object {
             It 'Synopsis' {
                 Get-Help $_ | Select-Object -ExpandProperty synopsis | should not benullorempty
             }
+            It "Synopsis should not be auto-generated" {
+                Get-Help $_ | Select-Object -ExpandProperty synopsis | Should Not BeLike '*`[`<CommonParameters`>`]*'
+            }            
             It 'Description' {
                 Get-Help $_ | Select-Object -ExpandProperty Description | should not benullorempty
             }
