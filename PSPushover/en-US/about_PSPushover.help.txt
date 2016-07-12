@@ -1,0 +1,24 @@
+TOPIC
+    PSPushover
+
+SHORT DESCRIPTION
+    Send Push notifications to your mobile devices through Pushover.net 
+    from PowerShell.  
+
+LONG DESCRIPTION
+    Send Push notifications to your mobile devices through Pushover.net 
+    from PowerShell. Send messages through the console, send status reports
+    at the end of your long running scripts, or build custom pager rules 
+    for your services. 
+
+    To begin start with the Save-PushoverAPIInformation cmdlet. This takes 
+    in your App Token and User Key. 
+
+    To get your User Key go to https://pushover.net/ and sign in. To create a 
+    new App go to https://pushover.net/apps/build and make sure to save the 
+    App Token. 
+
+    From there you can run Get-PushoverUserDevice to see which devices you
+    can target in your alert. Send-PushoverMessage supports the Pushover 
+    API for sending messages. 
+    
